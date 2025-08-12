@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+               sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";  
+    background-color: #f9fafb;  
+}
+.nav-bar {
+    background-color: #ffffff;     
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -4px rgba(0, 0, 0, 0.1); 
+    position: sticky;              
+    top: 0;                        
+    z-index: 50;
+}
+.bar-main {    
+    max-width: 80rem;       
+    margin-left: auto;      
+    margin-right: auto;
+    padding-left: 1rem;     
+    padding-right: 1rem;
+}
+.bar-content {
+    display: flex;           
+    justify-content: space-between;
+    align-items: center;    
+    padding-top: 1rem;      
+    padding-bottom: 1rem; 
+}
+.left-bar {
+    display: flex;           
+    align-items: center;    
+    gap: 0.5rem; 
+}
+.left-bar span{
+   font-size: 1.25rem;  
+   font-weight: 700;        
+   color: #ea580c;
+}
+.right-bar {
+    display: none;
+}
+.right-bar a{
+    color: #374151;
+  transition: color 0.3s;
+}
+.right-bar a:hover {
+    color: #ea580c;
+}
+#menu-btn {
+    color: #374151; 
+    outline: none;
+}
+#menu-btn:focus {
+    outline: none; 
+}
+#mobile-menu {
+    display: none;
+    padding-bottom: 1rem;
+}
+#mob-1st-a {
+    display: block;
+    padding-top: 0.5rem;      
+    padding-bottom: 0.5rem;  
+    color: #ea580c;
+}
+.mob-all-a {
+    display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;   
+    color: #374151; 
+}
+
+/* Hero section */
+#home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('/Odpic.jpg')no-repeat center center;
+    background-size: cover;
+}
+.hero-title {
+    text-align: center;
+  font-size: 2.25rem;  
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.hero-subtitle {
+  font-size: 1.25rem;  
+  margin-bottom: 2rem;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Orange button */
+.btn-primary {
+  background-color: #ea580c;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #c2410c;
+}
+
+/* White button with orange text */
+.btn-secondary {
+  background-color: #ffffff;
+  color: #ea580c;
+}
+
+.btn-secondary:hover {
+  background-color: #f3f4f6;
+}
+
+/* Responsive Design: */
+@media (min-width: 768px) {
+  .right-bar {
+    display: flex;
+    gap: 2rem;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .hero-title {
+    font-size: 3.75rem;
+    text-align: center;  
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+    text-align: center;  
+  }
+}
