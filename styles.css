@@ -10,12 +10,24 @@ body{
     background-color: #f9fafb;  
 }
 .nav-bar {
+  background-image: url('/navpic.jpg');
+  position: relative;
     background-color: #ffffff;     
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
               0 4px 6px -4px rgba(0, 0, 0, 0.1); 
     position: sticky;              
     top: 0;                        
     z-index: 50;
+}
+.nav-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4976c9e0;
+  z-index: -1; 
 }
 .bar-main {    
     max-width: 80rem;       
@@ -45,8 +57,9 @@ body{
     display: none;
 }
 .right-bar a{
-    color: #374151;
+    color: #d5d3b0;
   transition: color 0.3s;
+  font-weight: 600;
 }
 .right-bar a:hover {
     color: #ea580c;
@@ -114,6 +127,129 @@ body{
   transition: background-color 0.3s ease;
 }
 
+/* About Section*/
+#about{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #fff;
+}
+.abt-hDiv{
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem; 
+}
+.abt-hDiv>h2{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+.abt-left{
+  display: flex;
+  flex-direction: column; /* default */
+  gap: 2rem; /* 32px */
+}
+.abt-left-inner{
+   width: 100%;
+}
+.abt-left-inner > img{
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+}
+.abt-right{
+   width: 100%;
+}
+.abt-right-hdng{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ea580c;
+}
+.abt-right-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+
+}
+.abt-r-g-box{
+  background-color: #fff7ed;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.abt-r-g-box > h4{
+  font-weight: 600;
+}
+.abt-r-g-box > p{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.abt-r-g-b-inn{
+  color: #ea580c;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* map feature */
+      #map-sec{
+         height: fit-content;
+         width: 100%;
+         /* border: 2px solid blue; */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: transparent;
+         padding-top: 3rem;
+      }
+      .map-d {
+         height: fit-content;
+         width: 100%;                
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid black; */
+        background: transparent;
+       
+      }
+      .map-d h1 {
+        font-size: 1.875rem; 
+        font-weight: 700;  
+        text-align: center; 
+        margin-bottom: 1.5rem;
+        color: #1f2937; 
+      }
+      #map-container{
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        padding: 0.5%;
+        background-color: #ffffff;
+        
+      }
+      .svg-box {
+        width: 100%;
+        height: 100%;             
+        aspect-ratio: 8.5 / 3;      
+        display: block;
+        /* border: 1px solid greenyellow; */
+      }
+      path:hover{
+        fill: rgb(255, 255, 255) !important;
+        cursor: pointer;
+      }
+
 /* Orange button */
 .btn-primary {
   background-color: #ea580c;
@@ -151,4 +287,38 @@ body{
     font-size: 1.5rem;
     text-align: center;  
   }
+  .abt-right-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  } 
 }
+@media (min-width: 1024px){
+  .abt-left{
+    flex-direction: row;
+  }
+  .abt-left-inner{
+    width: 50%;
+  }
+  .abt-right{
+     width: 50%;
+  }
+}
+ @media screen and (max-width: 768px) {
+        .svg-box {
+            aspect-ratio: 4 / 4;      
+        }
+        
+}
+@media screen and (max-width: 1200px) {
+        .svg-box {
+            aspect-ratio: 4 / 3;      
+            
+        }
+        
+} 
+@media screen and (max-width: 1520px) {
+        .svg-box {
+            aspect-ratio: 8 / 4;      
+        }
+        
+}
+      
