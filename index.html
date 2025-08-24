@@ -47,6 +47,9 @@
          left: 15px;
          animation: spin 10s linear infinite;
       }
+      .carousel-item{
+        height: 70vh;
+      }
 
       @keyframes fadeIn {
         from {
@@ -60,6 +63,16 @@
       @keyframes spin {
       from { transform: rotate(0deg); }
       to   { transform: rotate(360deg); }
+    }
+    @media screen and (max-width: 768px){
+      .carousel-item{
+        height: 40vh;
+      }
+    }
+    @media  (max-width: 1200px) {
+      .carousel-item{
+        height: 60vh;
+      }
     }
 
 
@@ -135,28 +148,28 @@
     <button style="background-color: #e3cece;" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000" style="height: 80vh;">
+    <div class="carousel-item active" data-bs-interval="10000" ">
       <img src="konarkhd.jpg" class="d-block w-100" alt="..." style="height: 100%; object-fit: cover; object-position: center;">
       <div class="carousel-caption d-none d-md-block" >
         <h5>KONARK TEMPLE</h5>
         <p>The Konark Sun Temple is a magnificent 13th-century chariot-shaped monument.</p>
       </div>
     </div>
-    <div class="carousel-item" data-bs-interval="2000" style="height: 80vh;">
+    <div class="carousel-item" data-bs-interval="2000" ">
       <img src="deoMaliHd.jpg" class="d-block w-100" alt="..." style="height: 100%; object-fit: cover; object-position: center;">
       <div class="carousel-caption d-none d-md-block">
         <h5>Deomali Hill</h5>
         <p>Deomali Hill, Odisha’s highest peak, offers stunning views, lush greenery, and thrilling trekking experiences.</p>
       </div>
     </div>
-    <div class="carousel-item" style="height: 80vh;">
+    <div class="carousel-item" ">
       <img src="scHd.jpg" class="d-block w-100" alt="..." style="height: 100%; object-fit: cover; object-position: center;">
       <div class="carousel-caption d-none d-md-block">
         <h5>Beauty of ODISHA</h5>
         <p>Agriculture in Odisha thrives on rice cultivation, diverse crops, fertile soils, and monsoon-dependent farming practices.</p>
       </div>
     </div>
-    <div class="carousel-item" style="height: 80vh;">
+    <div class="carousel-item" ">
       <img src="seaBeachHd.jpg" class="d-block w-100" alt="..." style="height: 100%; object-fit: cover; object-position: center;">
       <div class="carousel-caption d-none d-md-block">
         <h5>Sea Beaches</h5>
